@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>innovativeQR - Produkte</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+  body {
+    background-color: #567;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #567;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .header-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #567;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-link:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .social-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .social-links img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .product {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .product-name {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .product-description {
+    display: none;
+    margin-top: 10px;
+    color: #999;
+    transition: height 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #ffc800;
+  }
+  
+  /* Show description and price on hover */
+  .product:hover .product-description {
+    display: block;
+    height: auto;
+  }
+  
+  /* Added styles for the dropdown menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #567;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 2; /* Set higher z-index to show the dropdown over other elements */
+  }
+
+  .dropdown-wrapper:hover .dropdown-menu,
+  .dropdown-menu:hover {
+    display: block;
+  }
+
+  .dropdown-menu li {
+    margin: 0;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #444;
+  }
+
+  /* Added styles for the footer */
+  footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links li {
+    list-style: none;
+    margin: 0 10px;
+  }
+
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Added styles for the impressum link */
+  .impressum-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+.impressum-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .impressum-link:hover {
+    color: #999;
+  }
+
+  /* Added styles for the "Jetzt bestellen" button */
+  .order-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #567;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .order-button:hover {
+    background-color: #444;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Willkommen bei innovative-QR</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html"><div class="header-link">Startseite</div></a></li>
+      <li><a href="produkte.html"><div class="header-link">Produkte</div></a></li>
+      <li class="dropdown-wrapper">
+        <!-- Galerie-Link ist klickbar und führt zur "galerie.html" Seite -->
+        <a href="galerie.html"><div class="header-link">Galerie</div></a>
+        <ul class="dropdown-menu"> <!-- Dropdown-Liste wird standardmäßig ausgeblendet -->
+          <li><a href="galerie_burger.html">Burgers</a></li>
+          <li><a href="galerie_Essen.html">Weiteres Essen</a></li>
+          <li><a href="galerie_feuerwerke.html">Feuerwerke (Beta)</a></li>
+          <li><a href="galerie_landschaften.html">Landschaften</a></li>
+          <li><a href="galerie_abstrakt.html">Abstrakte Werke</a></li>
+          <li><a href="galerie_teamqr.html">Unser Team in QR!</a></li>
+          <li><a href="galerie_weitere_werke.html">Werke von anderen</a></li>
+        </ul>
+      </li>
+      <li><a href="jetzt-bestellen.html"><div class="header-link">Jetzt bestellen</div></a></li>
+    </ul>
+  </nav>
+  <div class="social-links">
+    <a href="#"><img src="twitter.png" alt="Twitter"></a> <!-- Twitter-Link -->
+    <a href="#"><img src="instagram.png" alt="Instagram"></a> <!-- Instagram-Link -->
+  </div>
+</header>
+  
+<main>
+        <div class="product-container">
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 1">
+                <div class="product-info">
+                    <div class="product-name">QR-Code Aufkleber</div>
+                    <div class="product-description">Dieser QR-Code wird als Aufkleber geliefert und kann auf verschiedene Oberflächen aufgebracht werden, wie zum Beispiel auf Verpackungen, Broschüren oder Plakaten. Er ermöglicht es Kunden, schnell und einfach Informationen zu Ihrem Produkt oder Ihrer Marke zu erhalten, indem sie den QR-Code scannen.</div>
+                    <div class="product-price">Preis: 1,99 €</div>
+                    <button class="order-button" onclick="addToCart('QR-Code Aufkleber', 1.99)">Jetzt bestellen</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 2">
+                <div class="product-info">
+                    <div class="product-name">QR-Code mit Logo</div>
+                    <div class="product-description">Dieser QR-Code enthält Ihr Logo oder Markensymbol, um Ihre Marke zu stärken und den Wiedererkennungswert zu erhöhen. Er kann auf Visitenkarten, Produktverpackungen oder Werbematerialien platziert werden und verbindet Ihr physisches Marketingmaterial mit digitalen Inhalten oder Ihrer Website.</div>
+                    <div class="product-price">Preis: 2,49 €</div>
+                    <a href="bestellen.html" class="order-button">Jetzt bestellen</a>
+					<button class="order-button" onclick="addToCart('QR-Code mit Logo', 2,49)">Jetzt bestellen</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 3">
+                <div class="product-info">
+                    <div class="product-name">QR-Code auf T-Shirts</div>
+                    <div class="product-description">Dieser QR-Code wird auf T-Shirts gedruckt und eignet sich perfekt für Werbeaktionen, Veranstaltungen oder als originelles Geschenk für Ihre Kunden. Scannen die Kunden den QR-Code, werden sie auf Ihre Website, Ihre Angebote oder eine spezielle Rabattseite weitergeleitet.</div>
+                    <div class="product-price">Preis: 14,99 €</div>
+                    <a href="bestellen.html" class="order-button">Jetzt bestellen</a>
+					<button class="order-button" onclick="addToCart('QR-Code Aufkleber', 1.99)">Jetzt bestellen</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 4">
+                <div class="product-info">
+                    <div class="product-name">QR-Code als Tischwürfel</div>
+                    <div class="product-description">Dieser einzigartige QR-Code wird als Würfel gestaltet und kann auf Restauranttischen oder bei Events verwendet werden. Er ermöglicht es Gästen, schnell Informationen zu Menüs, Veranstaltungen oder Sonderangeboten abzurufen, indem sie den QR-Code scannen.</div>
+                    <div class="product-price">Preis: 6,99 €</div>
+                    <a href="bestellen.html" class="order-button">Jetzt bestellen</a>
+					<button class="order-button" onclick="addToCart('QR-Code Aufkleber', 1.99)">Jetzt bestellen</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 5">
+                <div class="product-info">
+                    <div class="product-name">QR-Code mit selbstlösender Folie</div>
+                    <div class="product-description">Dieser QR-Code ist mit einer selbstlösenden Folie ausgestattet. Damit kann er temporär auf glatte Oberflächen wie Spiegel, Glas oder Bildschirme geklebt werden, ohne Rückstände zu hinterlassen. Ideal für kurzfristige Werbeaktionen oder Eventpromotion.</div>
+                    <div class="product-price">Preis: 3,99 €</div>
+                    <a href="bestellen.html" class="order-button">Jetzt bestellen</a>
+					<button class="order-button" onclick="addToCart('QR-Code Aufkleber', 1.99)">Jetzt bestellen</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 6">
+                <div class="product-info">
+                    <div class="product-name">QR-Code für Merchandising</div>
+                    <div class="product-description">Dieser QR-Code wird für Merchandising-Zwecke verwendet und kann auf Tassen, Schlüsselanhänger oder anderen Produkten platziert werden. Perfekt als Geschenk für Kunden oder als Werbeartikel, um die Markenbekanntheit zu steigern. Kontaktieren Sie uns dafür!</div>
+                    <div class="product-price">Preis: 5,99 €</div>
+                    <a href="bestellen.html" class="order-button">Jetzt bestellen</a>
+					<button class="order-button" onclick="addToCart('QR-Code Aufkleber', 1.99)">Jetzt bestellen</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 7">
+                <div class="product-info">
+                    <div class="product-name">QR-Code für Veranstaltungen</div>
+                    <div class="product-description">Dieser QR-Code ist speziell für Veranstaltungen konzipiert und kann auf Eintrittskarten, Flyern oder Plakaten platziert werden. Er ermöglicht den Besuchern den Zugriff auf Eventinformationen, Zeitpläne oder die Online-Registrierung.</div>
+                    <div class="product-price">Preis: 4,49 €</div>
+                    <a href="bestellen.html" class="order-button">Jetzt bestellen</a>
+					<button class="order-button" onclick="addToCart('QR-Code Aufkleber', 1.99)">Jetzt bestellen</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 8">
+                <div class="product-info">
+                    <div class="product-name">QR-Code für Produktverpackungen</div>
+                    <div class="product-description">Dieser QR-Code wird auf Produktverpackungen angebracht und verbindet den Kunden direkt mit zusätzlichen Informationen, Produktbewertungen oder Anwendungsvideos. Eine ideale Möglichkeit, die Kundenbindung zu erhöhen und weitere Produkte zu bewerben.</div>
+                    <div class="product-price">Preis: 2,99 €</div>
+                    <a href="bestellen.html" class="order-button">Jetzt bestellen</a>
+					<button class="order-button" onclick="addToCart('QR-Code Aufkleber', 1.99)">Jetzt bestellen</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="logo.jpg" alt="Produkt 9">
+                <div class="product-info">
+                    <div class="product-name">QR-Code für Messestände</div>
+                    <div class="product-description">Dieser QR-Code wird für Messestände verwendet und kann auf Bannern, Werbewänden oder Infomaterialien platziert werden. Er leitet Messebesucher zu Ihren Produkten, Präsentationen oder ermöglicht die sofortige Kontaktaufnahme.</div>
+                    <div class="product-price">Preis: 7,99 €</div>
+                    <a href="bestellen.html" class="order-button">Jetzt bestellen</a>
+					<button class="order-button" onclick="addToCart('QR-Code Aufkleber', 1.99)">Jetzt bestellen</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<footer>
+  <div class="product">
+    <img src="logo.jpg" alt="logo">
+    <ul class="footer-links">
+      <li><a href="impressum.html" class="impressum-link">Impressum</a></li> <!-- Link zum Impressum -->
+    </ul>
+  </div>
+  <p>&copy; 2023 innovative-QR Webshop. Alle Rechte vorbehalten.</p>
+</footer>
+<script>
+    // JavaScript-Code für das Hinzufügen von Produkten zum Warenkorb
+    function addToCart(productName, productPrice) {
+      // Hole den Warenkorb aus dem Local Storage (oder erstelle ein leeres Array, wenn es noch keinen gibt)
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+      // Füge das ausgewählte Produkt und Preis zum Warenkorb hinzu
+      cartItems.push({ name: productName, price: productPrice });
+
+      // Speichere den aktualisierten Warenkorb im Local Storage
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+      // Gehe zur Bestellen-Seite
+      window.location.href = 'bestellen.html';
+    }
+</script>
+</body>
+</html>

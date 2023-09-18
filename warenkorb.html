@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Warenkorb</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #567;
+      color: #fff;
+      font-family: 'Innovative Font', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    #cart-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .cart-item {
+      margin: 20px;
+      text-align: center;
+      width: 300px;
+      position: relative;
+    }
+
+    .cart-item img {
+      width: 100%;
+      height: 200px; /* Anpassen der Höhe nach Bedarf */
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .payment-form {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .payment-form label {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .payment-form input {
+      padding: 10px;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .payment-form button {
+      display: inline-block;
+      background-color: #222;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Warenkorb</h1>
+    <!-- Navigation oder andere Header-Elemente hier einfügen -->
+  </header>
+  
+  <main>
+    <!-- Hier werden die ausgewählten Produkte angezeigt -->
+    <div id="cart-items">
+      <!-- Die ausgewählten Produkte werden hier dynamisch eingefügt -->
+    </div>
+    
+    <!-- Eingabeform für die Zahlungsinformationen -->
+    <form class="payment-form">
+      <!-- Hier werden die Zahlungsinformationen abgefragt -->
+      <!-- Beispiel: Name, Kreditkartennummer, Ablaufdatum, etc. -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <!-- Weitere Felder für die Zahlungsinformationen hier einfügen -->
+      
+      <button type="submit">Zahlung abschließen</button>
+    </form>
+  </main>
+  
+  <script src="warenkorb.js"></script> <!-- JavaScript-Datei für den Warenkorb -->
+</body>
+</html>

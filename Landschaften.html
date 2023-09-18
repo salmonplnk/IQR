@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>innovativeQR</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #567;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #567;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .header-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #567;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .header-link:hover {
+      background-color: #444;
+      color: #fff;
+    }
+    
+    .social-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    
+    .social-links img {
+      width: 36px;
+      height: 36px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin: 0;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    
+    .gallery img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    
+    .gallery p {
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      color: #fff;
+    }
+    
+    footer img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    footer p {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Willkommen bei innovative-QR</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html"><div class="header-link">Startseite</div></a></li>
+        <li><a href="produkte.html"><div class="header-link">Produkte</div></a></li>
+        <li><a href="ueber-uns.html"><div class="header-link">Über uns</div></a></li>
+        <li><a href="galerie.html"><div class="header-link">Galerie</div></a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="#"><img src="twitter.png" alt="Twitter"></a> <!-- Twitter-Link -->
+      <a href="#"><img src="instagram.png" alt="Instagram"></a> <!-- Instagram-Link -->
+    </div>
+  </header>
+  
+  <main>
+    <div class="gallery">
+      <div>
+        <img src="bild1.png" alt="Bild 1">
+        <p>Referenzbild 1</p>
+      </div>
+      <div>
+        <img src="bild2.png" alt="Bild 2">
+        <p>Referenzbild 2</p>
+      </div>
+      <div>
+        <img src="bild3.png" alt="Bild 3">
+        <p>Referenzbild 3</p>
+      </div>
+      <div>
+        <img src="bild4.png" alt="Bild 4">
+        <p>Referenzbild 4</p>
+      </div>
+      <div>
+        <img src="bild5.png" alt="Bild 5">
+        <p>Referenzbild 5</p>
+      </div>
+      <div>
+        <img src="bild6.png" alt="Bild 6">
+        <p>Referenzbild 6</p>
+      </div>
+      <div>
+        <img src="bild7.png" alt="Bild 7">
+        <p>Referenzbild 7</p>
+      </div>
+      <div>
+        <img src="bild8.png" alt="Bild 8">
+        <p>Referenzbild 8</p>
+      </div>
+      <div>
+        <img src="bild9.png" alt="Bild 9">
+        <p>Referenzbild 9</p>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="product">
+      <img src="logo.jpg" alt="logo">
+      <li><a href="impressum.html" class="header-link">Impressum</a></li> <!-- Link zum Impressum -->
+    </div>
+    <p>&copy; 2023 innovative-QR Webshop. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>

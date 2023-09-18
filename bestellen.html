@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   .payment-form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .payment-form label {
+      display: block;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .payment-form input,
+    .payment-form textarea,
+    .payment-form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      background-color: #555;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .payment-form button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #567;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .payment-form button:hover {
+      background-color: #444;
+    }
+    body {
+      background-color: #567;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #567;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .header-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #567;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .header-link:hover {
+      background-color: #444;
+      color: #fff;
+    }
+    
+    .social-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    
+    .social-links img {
+      width: 36px;
+      height: 36px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin: 0;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    
+    .gallery img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    
+    .gallery p {
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      color: #fff;
+    }
+    
+    footer img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    footer p {
+      font-size: 14px;
+    }
+
+    /* Added styles for the dropdown menu */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #567;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown-wrapper:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #444;
+    }
+    /* Add some basic styling to the table */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    .product-image {
+      width: 50px;
+      height: 50px;
+    }body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #567;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #444;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-selection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  margin-right: 10px;
+}
+
+.quantity-input {
+  width: 60px;
+}
+
+.cart-button {
+  padding: 8px 16px;
+  background-color: #567;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button:hover {
+  background-color: #444;
+}
+
+.cart-summary {
+  margin-top: 30px;
+}
+
+.cart-summary table {
+  margin-bottom: 20px;
+}
+
+.cart-summary table td {
+  padding: 10px;
+}
+
+.cart-summary tfoot {
+  font-weight: bold;
+}
+
+/* Responsive styles for better mobile display */
+@media (max-width: 480px) {
+  ul {
+    flex-direction: column;
+  }
+
+  .product-selection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Deine Produkte auswählen!</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html"><div class="header-link">Startseite</div></a></li>
+      <li><a href="produkte.html"><div class="header-link">Produkte</div></a></li>
+      <li><a href="ueber-uns.html"><div class="header-link">Über uns</div></a></li>
+      <li class="dropdown-wrapper">
+        <a href="galerie.html"><div class="header-link">Galerie</div></a>
+        <ul class="dropdown-menu">
+          <li><a href="galerie_burger.html">Burgers</a></li>
+          <li><a href="galerie_Essen.html">Weiteres Essen</a></li>
+          <li><a href="galerie_feuerwerke.html">Feuerwerke (Beta)</a></li>
+          <li><a href="galerie_landschaften.html">Landschaften</a></li>
+          <li><a href="galerie_abstrakt.html">Abstrakte Werke</a></li>
+          <li><a href="galerie_teamqr.html">Unser Team in QR!</a></li>
+          <li><a href="galerie_weitere_werke.html">Werke von anderen</a></li>
+        </ul>
+      </li>
+      <li><a href="bestellen.html"><div class="header-link">Bestellen</div></a></li>
+    </ul>
+  </nav>
+  <div class="social-links">
+    <a href="#"><img src="twitter.png" alt="Twitter"></a> <!-- Twitter-Link -->
+    <a href="#"><img src="instagram.png" alt="Instagram"></a> <!-- Instagram-Link -->
+  </div>
+</header>
+  <div class="container">
+    <h2>Wähle hier, was du bestellen willst und drücke auf "Hinzufügen"</h2>
+    <!-- List of products -->
+    <ul>
+      <li onclick="updateProduct('Main Product', 10, 'logo.jpg')">Main Product</li>
+      <li onclick="updateProduct('Additional Product 1', 5, 'logo.jpg')">Additional Product 1</li>
+      <li onclick="updateProduct('Additional Product 2', 8, 'logo.jpg')">Additional Product 2</li>
+    </ul><div class="product-selection">
+  <img class="product-image" id="product-image" src="logo.jpg" alt="Product Image">
+  <div>
+    <h2 id="selected-product">Main Product</h2>
+    <p>Price: $<span id="product-price">10</span></p>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+    <button onclick="addToCart()" class="cart-button">Hinzufügen</button>
+  </div>
+</div>
+
+<!-- Shopping Cart Summary -->
+<div class="cart-summary">
+  <h2>Shopping Cart Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Auswahl</th>
+        <th>Preis</th>
+        <th>Menge</th>
+      </tr>
+    </thead>
+    <tbody id="cart-summary-body">
+      <!-- Cart items will be dynamically added here -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total:</td>
+        <td id="cart-total">0</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+  </div>
+  <form class="payment-form" action="process_form.php" action="send_email.php" method="post">
+  <input type="hidden" name="cart-items" id="cart-items" value="">
+      <label for="company">Firma (optional):</label>
+      <input type="text" id="company" name="company">
+
+      <label for="lastname">Name:</label>
+      <input type="text" id="lastname" name="lastname" required>
+
+      <label for="firstname">Vorname:</label>
+      <input type="text" id="firstname" name="firstname" required>
+
+      <label for="email">E-Mail-Adresse:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Telefonnummer (optional):</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="address">Adresse:</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label for="payment-method">Zahlungsmethode:</label>
+      <select id="payment-method" name="payment-method">
+        <option value="credit-card">Twint</option>
+        <option value="paypal">PayPal</option>
+        <option value="bank-transfer">Rechnung</option>
+        <!-- Fügen Sie hier weitere Zahlungsmethoden hinzu -->
+      </select>
+	  <input type="hidden" name="cart-items" id="cart-items" value="">
+      <button type="submit">Zahlung abschließen</button>
+    </form>
+
+  <script>
+    let cartItems = [];
+
+    // Function to update the selected product and its price in the table
+    function updateProduct(productName, price, image) {
+      document.getElementById('selected-product').innerText = productName;
+      document.getElementById('product-price').innerText = price;
+      document.getElementById('product-image').src = image;
+    }
+
+    // Function to add the selected product to the cart
+    function addToCart() {
+      const productName = document.getElementById('selected-product').innerText;
+      const price = parseFloat(document.getElementById('product-price').innerText);
+      const quantity = parseInt(document.getElementById('quantity').value);
+
+      const cartItem = {
+        productName,
+        price,
+        quantity
+      };
+
+      cartItems.push(cartItem);
+      updateCartSummary();
+    }
+
+    // Function to update the shopping cart summary
+    function updateCartSummary() {
+      const cartSummaryBody = document.getElementById('cart-summary-body');
+      cartSummaryBody.innerHTML = '';
+      let total = 0;
+
+      for (const item of cartItems) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.productName}</td>
+          <td>$${(item.price * item.quantity).toFixed(2)}</td>
+          <td>${item.quantity}</td>
+        `;
+        cartSummaryBody.appendChild(row);
+        total += item.price * item.quantity;
+      }
+
+      const cartTotalCell = document.getElementById('cart-total');
+      cartTotalCell.innerText = '$' + total.toFixed(2);
+    }
+  document.querySelector('.payment-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const paymentMethod = document.getElementById('payment-method').value;
+
+    switch (paymentMethod) {
+      case 'credit-card':
+        window.location.href = 'credit_card_payment.html'; // Ändere die URL entsprechend
+        break;
+      case 'paypal':
+        window.location.href = 'http://paypal.me/innovativeqr'; // Ändere die URL entsprechend
+        break;
+      case 'bank-transfer':
+        window.location.href = 'bank_transfer_payment.html'; // Ändere die URL entsprechend
+        break;
+      // Füge weitere Cases für andere Zahlungsmethoden hinzu
+	  
+	  // Die Cart-Zusammenfassung als JSON in das hidden input-Feld einfügen
+  document.getElementById('cart-items').value = JSON.stringify(cartItems);
+
+  // Formular absenden
+  this.submit();
+    }
+  });  
+</script>
+   <footer>
+    <div class="bestellen">
+      <img src="logo.jpg" alt="logo">
+      <li><a href="impressum.html" class="header-link">Impressum</a></li> <!-- Link zum Impressum -->
+    </div>
+    <p>&copy; 2023 innovative-QR Webshop. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>

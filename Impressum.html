@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Impressum</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+   .payment-form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .payment-form label {
+      display: block;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .payment-form input,
+    .payment-form textarea,
+    .payment-form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      background-color: #555;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .payment-form button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #567;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .payment-form button:hover {
+      background-color: #444;
+    }
+    body {
+      background-color: #567;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #567;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .header-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #567;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .header-link:hover {
+      background-color: #444;
+      color: #fff;
+    }
+    
+    .social-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    
+    .social-links img {
+      width: 36px;
+      height: 36px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin: 0;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    
+    .gallery img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    
+    .gallery p {
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      color: #fff;
+    }
+    
+    footer img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    footer p {
+      font-size: 14px;
+    }
+
+    /* Added styles for the dropdown menu */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #567;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown-wrapper:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #444;
+    }
+    /* Add some basic styling to the table */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    .product-image {
+      width: 50px;
+      height: 50px;
+    }body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #567;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #444;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-selection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  margin-right: 10px;
+}
+
+.quantity-input {
+  width: 60px;
+}
+
+.cart-button {
+  padding: 8px 16px;
+  background-color: #567;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button:hover {
+  background-color: #444;
+}
+
+.cart-summary {
+  margin-top: 30px;
+}
+
+.cart-summary table {
+  margin-bottom: 20px;
+}
+
+.cart-summary table td {
+  padding: 10px;
+}
+
+.cart-summary tfoot {
+  font-weight: bold;
+}
+
+/* Responsive styles for better mobile display */
+@media (max-width: 480px) {
+  ul {
+    flex-direction: column;
+  }
+
+  .product-selection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+      <header>
+    <h1>Impressum</h1>
+     <nav>
+    <ul>
+      <li><a href="index.html"><div class="header-link">Startseite</div></a></li>
+      <li><a href="produkte.html"><div class="header-link">Produkte</div></a></li>
+      <li><a href="ueber-uns.html"><div class="header-link">Über uns</div></a></li>
+      <li class="dropdown-wrapper">
+        <a href="galerie.html"><div class="header-link">Galerie</div></a>
+        <ul class="dropdown-menu">
+          <li><a href="galerie_burger.html">Burgers</a></li>
+          <li><a href="galerie_Essen.html">Weiteres Essen</a></li>
+          <li><a href="galerie_feuerwerke.html">Feuerwerke (Beta)</a></li>
+          <li><a href="galerie_landschaften.html">Landschaften</a></li>
+          <li><a href="galerie_abstrakt.html">Abstrakte Werke</a></li>
+          <li><a href="galerie_teamqr.html">Unser Team in QR!</a></li>
+          <li><a href="galerie_weitere_werke.html">Werke von anderen</a></li>
+        </ul>
+      </li>
+      <li><a href="bestellen.html"><div class="header-link">Bestellen</div></a></li>
+    </ul>
+  </nav>
+  </header>
+  </header>
+  
+  <main>
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo">
+    </div>
+    
+    
+    <h2>Betreiber der Website</h2>
+    <p>Julian Wyss</p>
+    <p>Vincent Burgener</p>
+    
+    <h2>Kontaktinformationen</h2>
+    <p>Adresse: Dunantstrasse 24, 3006 Bern, Schweiz</p>
+    <p>Telefon: 078 400 74 76</p>
+    <p>E-Mail: info@i-qr.ch</p>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 innovative-QR Webshop. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>

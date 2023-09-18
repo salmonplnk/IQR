@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>innovativeQR</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #567;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #567;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .header-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #567;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .header-link:hover {
+      background-color: #444;
+      color: #fff;
+    }
+    
+    .social-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    
+    .social-links img {
+      width: 36px;
+      height: 36px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin: 0;
+      text-align: center;
+    }
+	h2 {
+      font-family: Courier New;
+	  font-size: 24px;
+      margin: 0;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    
+    .homepage-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .homepage-links a {
+      flex: 1 0 200px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+    }
+    
+    .homepage-links img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .homepage-links a:hover img {
+      transform: scale(1.1);
+    }
+    
+    .homepage-links p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    footer img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    /* Added styles for the dropdown menu */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #567;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown-wrapper:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #444;
+    }
+    footer p {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Willkommen bei innovative-QR</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html"><div class="header-link">Startseite</div></a></li>
+        <li><a href="produkte.html"><div class="header-link">Produkte</div></a></li>
+        <li><a href="ueber-uns.html"><div class="header-link">Über uns</div></a></li>
+        <li class="dropdown-wrapper">
+        <a href="galerie.html"><div class="header-link">Galerie</div></a>
+        <ul class="dropdown-menu">
+          <li><a href="galerie_burger.html">Burgers</a></li>
+          <li><a href="galerie_Essen.html">Weiteres Essen</a></li>
+          <li><a href="galerie_feuerwerke.html">Feuerwerke (Beta)</a></li>
+          <li><a href="galerie_landschaften.html">Landschaften</a></li>
+          <li><a href="galerie_abstrakt.html">Abstrakte Werke</a></li>
+          <li><a href="galerie_teamqr.html">Unser Team in QR!</a></li>
+          <li><a href="galerie_weitere_werke.html">Werke von anderen</a></li>
+        </ul>
+      </li>
+		<li><a href="Bestellen.html"><div class="header-link">Bestellen</div></a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="#"><img src="twitter.png" alt="Twitter"></a> <!-- Twitter-Link -->
+      <a href="#"><img src="instagram.png" alt="Instagram"></a> <!-- Instagram-Link -->
+    </div>
+  </header>
+  
+  <main>
+    <div class="homepage-links">
+      <a href="produkte.html">
+        <img src="produkt-thumbnail.jpg" alt="Produkte">
+        <p>Produkte</p>
+      </a>
+      <a href="ueber-uns.html">
+        <img src="ueber-uns-thumbnail.jpg" alt="Über uns">
+        <p>Über uns</p>
+      </a>
+      <a href="galerie.html">
+        <img src="galerie-thumbnail.png" alt="Galerie">
+        <p>Galerie</p>
+      </a>
+      <a href="bestellen.html">
+        <img src="bestellen-thumbnail.jpg" alt="bestellen">
+      </a>
+    </div>
+	<h2>"Revolutionizing with I-QR: Where Art and Tech Converge"</h2>
+  </main>
+  
+  <footer>
+    <div class="product">
+      <img src="logo.jpg" alt="logo">
+      <li><a href="impressum.html" class="header-link">Impressum</a></li> <!-- Link zum Impressum -->
+    </div>
+    <p>&copy; 2023 innovative-QR Webshop. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>
